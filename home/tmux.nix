@@ -9,7 +9,6 @@
   secureSocket = true;
   shell = "${pkgs.zsh}/bin/zsh";
   shortcut = "a";
-  terminal = "screen-256color";
   sensibleOnTop = false;
 
   plugins = with pkgs.tmuxPlugins; [
@@ -18,9 +17,6 @@
   ];
 
   extraConfig = ''
-    set -gu default-command
-    set-option -sa terminal-overrides ",xterm*:Tc"
-
     set -g prefix C-a
     set -g mouse on
 
