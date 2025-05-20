@@ -1,0 +1,41 @@
+{ config, pkgs, pkgsUnstable, ... }:
+{
+	enable = true;
+	package = pkgsUnstable.alacritty;
+
+	settings = {
+		colors = {
+			primary = {
+				background = "#000000";
+				foreground = "#cccccc";
+			};
+		};
+		window = {
+			padding = { x = 4; y = 0; };
+			decorations = "Buttonless";
+			opacity = 1;
+			startup_mode = "Windowed";
+			title = "Alacritty";
+			dynamic_title = true;
+			decorations_theme_variant = "None";
+		};
+
+		font = let jetbrainsMono = style: {
+			family = "JetBrainsMono Nerd Font";
+			inherit style;
+		}; in {
+			size = 16;
+			normal = jetbrainsMono "Light";
+		};
+
+		cursor = {
+			style = "Block";
+		};
+
+		env = {
+			TERM = "xterm-256color";
+		};
+
+		general.live_config_reload = true;
+	};
+}

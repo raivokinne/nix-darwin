@@ -1,0 +1,15 @@
+{
+    "diagnostics.globals": [
+        "fb_actions",
+        "actions",
+        "Snacks",
+        "vim"
+    ],
+    "diagnostics.disable": [
+        "duplicate-set-field",
+        "deprecated",
+        "undefined-field",
+        "undefined-doc-name",
+        "cast-local-type"
+    ]
+}
