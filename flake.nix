@@ -40,7 +40,9 @@
 					};
 					riptide = {
 						enable = true;
-						user = "raivokinne";
+						user   = "raivokinne";               # Run under your user account
+						proxy.enable   = true;                       # Auto-start the *.riptide.local proxy
+						dbDrivers.mysql.enable = true;             # If you want built-in MySQL support
 					};
 				};
 
@@ -167,6 +169,7 @@
 						home-manager.useUserPackages = true;
 						home-manager.extraSpecialArgs = {
 							pkgsUnstable = nixpkgs-unstable.legacyPackages.aarch64-darwin;
+							riptide      = riptide;
 						};
 						home-manager.users.raivokinne = import ./home.nix;
 					}

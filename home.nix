@@ -1,4 +1,4 @@
-{ config, pkgs, pkgsUnstable, ... }:
+{ config, pkgs, pkgsUnstable, riptide, ... }:
 let
 	inherit (config.lib.file) mkOutOfStoreSymlink;
 in
@@ -65,7 +65,6 @@ in
 		plantuml
 		autoconf
 		discord
-		kitty
 	];
 
 	programs = {
