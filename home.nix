@@ -47,11 +47,11 @@ in
 		php
 		zip
 		openssl
-		micromamba # faster conda
-		pkg-config # compiling flags generator (for libraries)
-		luarocks              # lua package manager
-		pnpm # faster npm
-		lua5_4 # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/interpreters/lua-5/default.nix
+		micromamba
+		pkg-config
+		luarocks
+		pnpm
+		lua5_4
 		gfortran14
 		typescript
 		prettierd
@@ -65,6 +65,7 @@ in
 		plantuml
 		autoconf
 		discord
+		kitty
 	];
 
 	programs = {
