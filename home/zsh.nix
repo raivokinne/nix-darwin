@@ -1,4 +1,4 @@
-{ config, pkgs, riptide, ... }:
+{ config, pkgs, ... }:
 {
   enable = true;
   history.size = 10000;
@@ -29,7 +29,6 @@
 	if [[ -o interactive ]]; then
 		fastfetch
 	fi
-	 ${riptide.riptideShellIntegration.zsh}
   '';
   oh-my-zsh = {
     enable = false;

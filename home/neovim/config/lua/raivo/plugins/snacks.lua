@@ -3,9 +3,6 @@ return {
     "folke/snacks.nvim",
     ---@type snacks.Config
     opts = {
-      indent = {
-        chunk = { enabled = true },
-      },
       dashboard = {
         width = 60,
         row = nil, -- dashboard position. nil for center
@@ -77,10 +74,7 @@ return {
         },
       },
       notifier = {},
-      scroll = {},
-      input = {
-        -- refer to the configuration section below
-      },
+      input = {},
     },
   },
 }

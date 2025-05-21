@@ -14,6 +14,8 @@ in
 	home.homeDirectory = "/Users/raivokinne";
 
 	home.packages = with pkgs; [
+		docker
+		docker-compose
 		awscli
 		ffmpeg
 		ripgrep
@@ -69,7 +71,7 @@ in
 
 	programs = {
 		tmux = (import ./home/tmux.nix { inherit pkgs; });
-		zsh = (import ./home/zsh.nix { inherit config pkgs riptide; });
+		zsh = (import ./home/zsh.nix { inherit config pkgs; });
 		starship = (import ./home/starship.nix { inherit pkgs; });
 		zoxide = (import ./home/zoxide.nix { inherit pkgs; });
 		fzf = (import ./home/fzf.nix { inherit pkgs; });

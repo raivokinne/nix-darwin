@@ -10,11 +10,10 @@
 		home-manager.url = "github:nix-community/home-manager/release-25.05";
 		nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
-		riptide.url = "github:theCapypara/riptide-all";
 		flake-utils.url    = "github:numtide/flake-utils";
 	};
 
-	outputs = { self, nix-darwin, nixpkgs, nixpkgs-unstable, riptide, nix-homebrew, templ, home-manager, ... }@inputs:
+	outputs = { self, nix-darwin, nixpkgs, nixpkgs-unstable, nix-homebrew, templ, home-manager, ... }@inputs:
 		let
 			configuration = { pkgs, config, ... }: {
 				# List packages installed in system profile. To search by name, run:
@@ -24,11 +23,8 @@
 					inputs.templ.overlays.default
 				];
 				environment.systemPackages = with pkgs; [
-					docker
-					docker-compose
 					neovim
 				];
-				programs.docker.enable = true;
 
 				users.users.raivokinne = {
 					name = "raivokinne";
@@ -41,19 +37,12 @@
 					sketchybar = {
 						enable = true;
 					};
-					riptide = {
-						enable = true;
-						user   = "raivokinne";               # Run under your user account
-						proxy.enable   = true;                       # Auto-start the *.riptide.local proxy
-						dbDrivers.mysql.enable = true;             # If you want built-in MySQL support
-					};
 				};
 
 				homebrew = {
 					enable = true;
-					brews = [
-						"mariadb"
-					];
+					casks = [ "podman-desktop" "docker" ];
+					brews = [ "podman" "mariadb" "podman-compose" ];
 					onActivation = {
 						autoUpdate = true;
 						cleanup = "uninstall";
@@ -159,7 +148,6 @@
 					configuration
 					home-manager.darwinModules.home-manager
 					nix-homebrew.darwinModules.nix-homebrew
-					riptide.darwinModules.default
 					{
 						nix-homebrew = {
 							enable = true;
@@ -172,7 +160,6 @@
 						home-manager.useUserPackages = true;
 						home-manager.extraSpecialArgs = {
 							pkgsUnstable = nixpkgs-unstable.legacyPackages.aarch64-darwin;
-							riptide      = riptide;
 						};
 						home-manager.users.raivokinne = import ./home.nix;
 					}
