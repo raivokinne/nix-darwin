@@ -55,8 +55,8 @@ return {
     priority = 1000,
     lazy = false,
     config = function()
-      -- vim.cmd.colorscheme "yellowbeans"
-      -- vim.cmd.colorscheme "gruvbuddy"
+      vim.cmd.colorscheme "yellowbeans"
+      vim.cmd.colorscheme "gruvbuddy"
     end,
   },
   {
@@ -77,10 +77,10 @@ return {
     "tjdevries/colorbuddy.nvim",
     lazy = false,
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme "zenbones"
-      vim.cmd.colorscheme "gruvbuddy"
-    end,
+    -- config = function()
+    --   vim.cmd.colorscheme "zenbones"
+    --   vim.cmd.colorscheme "gruvbuddy"
+    -- end,
   },
   {
     "folke/tokyonight.nvim",
@@ -116,6 +116,7 @@ return {
       require("rose-pine").setup {
         styles = {
           transparency = true,
+          bold = false,
         },
       }
     end,

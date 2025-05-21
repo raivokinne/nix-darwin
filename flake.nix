@@ -10,9 +10,10 @@
 		home-manager.url = "github:nix-community/home-manager/release-25.05";
 		nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
+		riptide.url = "github:theCapypara/riptide-all";
 	};
 
-	outputs = { self, nix-darwin, nixpkgs, nixpkgs-unstable, nix-homebrew, templ, home-manager, ... }@inputs:
+	outputs = { self, nix-darwin, nixpkgs, nixpkgs-unstable, riptide, nix-homebrew, templ, home-manager, ... }@inputs:
 		let
 			configuration = { pkgs, config, ... }: {
 				# List packages installed in system profile. To search by name, run:
@@ -36,6 +37,10 @@
 				services = {
 					sketchybar = {
 						enable = true;
+					};
+					riptide = {
+						enable = true;
+						user = "raivokinne";
 					};
 				};
 
@@ -149,6 +154,7 @@
 					configuration
 					home-manager.darwinModules.home-manager
 					nix-homebrew.darwinModules.nix-homebrew
+					riptide.darwinModules.default
 					{
 						nix-homebrew = {
 							enable = true;
