@@ -69,7 +69,7 @@ in
 
 	programs = {
 		tmux = (import ./home/tmux.nix { inherit pkgs; });
-		zsh = (import ./home/zsh.nix { inherit config pkgs; });
+		zsh = (import ./home/zsh.nix { inherit config pkgs riptide; });
 		starship = (import ./home/starship.nix { inherit pkgs; });
 		zoxide = (import ./home/zoxide.nix { inherit pkgs; });
 		fzf = (import ./home/fzf.nix { inherit pkgs; });

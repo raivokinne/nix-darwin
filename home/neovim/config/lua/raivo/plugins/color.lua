@@ -18,6 +18,7 @@ return {
     config = function()
       require("catppuccin").setup {
         transparent_background = true, -- disables setting the background color.
+        no_bold = true,
         styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
           comments = { "italic" }, -- Change the style of comments
           conditionals = { "italic" },

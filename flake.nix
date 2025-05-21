@@ -11,6 +11,7 @@
 		nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
 		riptide.url = "github:theCapypara/riptide-all";
+		flake-utils.url    = "github:numtide/flake-utils";
 	};
 
 	outputs = { self, nix-darwin, nixpkgs, nixpkgs-unstable, riptide, nix-homebrew, templ, home-manager, ... }@inputs:
@@ -22,10 +23,12 @@
 				nixpkgs.overlays = [
 					inputs.templ.overlays.default
 				];
-				environment.systemPackages =
-					[
-						pkgs.neovim
-					];
+				environment.systemPackages = with pkgs; [
+					docker
+					docker-compose
+					neovim
+				];
+				programs.docker.enable = true;
 
 				users.users.raivokinne = {
 					name = "raivokinne";
