@@ -20,6 +20,9 @@ return {
         end,
     },
 	{
+		"tjdevries/colorbuddy.nvim",
+	},
+	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,

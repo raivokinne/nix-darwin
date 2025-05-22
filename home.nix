@@ -1,4 +1,4 @@
-{ config, pkgs, pkgsUnstable, riptide, ... }:
+{ config, pkgs, pkgsUnstable, stdenv, ... }:
 let
 	inherit (config.lib.file) mkOutOfStoreSymlink;
 in
@@ -14,6 +14,8 @@ in
 	home.homeDirectory = "/Users/raivokinne";
 
 	home.packages = with pkgs; [
+		lazygit
+		gh
 		docker
 		docker-compose
 		awscli
@@ -67,6 +69,7 @@ in
 		plantuml
 		autoconf
 		discord
+		sqlite
 	];
 
 	programs = {
