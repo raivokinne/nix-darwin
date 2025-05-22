@@ -32,10 +32,6 @@
 			style = "Block";
 		};
 
-		env = {
-			TERM = "xterm-256color";
-		};
-
 		general.live_config_reload = true;
 	};
 }
