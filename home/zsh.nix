@@ -29,6 +29,11 @@
 	if [[ -o interactive ]]; then
 		fastfetch
 	fi
+	export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+	alias l='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first'
+	alias ll='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -l --git -h'
+	alias la='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a'
+	alias lla='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a -l --git -h'
   '';
   oh-my-zsh = {
     enable = false;

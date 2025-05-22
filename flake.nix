@@ -35,13 +35,13 @@
 
 				services = {
 					sketchybar = {
-						enable = true;
+						enable = false;
 					};
 				};
 
 				homebrew = {
 					enable = true;
-					casks = [ "podman-desktop" "docker" ];
+					casks = [ "podman-desktop" "docker" "amethyst" ];
 					brews = [ "podman" "mariadb" "podman-compose" ];
 					onActivation = {
 						autoUpdate = true;

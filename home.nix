@@ -40,6 +40,7 @@ in
 		fd
 		jq
 		lazydocker
+		sketchybar
 		nh
 		openconnect
 		pipenv
@@ -70,6 +71,7 @@ in
 		autoconf
 		discord
 		sqlite
+		brave
 	];
 
 	programs = {
