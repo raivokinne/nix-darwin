@@ -23,10 +23,7 @@ return {
       { "j-hui/fidget.nvim", opts = {} },
       { "https://git.sr.ht/~whynothugo/lsp_lines.nvim" },
 
-      -- Schema information
       "b0o/SchemaStore.nvim",
-
-		"stevearc/conform.nvim",
     },
     config = function()
       if vim.g.obsidian then
@@ -228,10 +225,7 @@ return {
           vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { buffer = 0 })
           vim.keymap.set("n", "<space>wd", builtin.lsp_document_symbols, { buffer = 0 })
 
-          local filetype = vim.bo[bufnr].filetype
-          if disable_semantic_tokens[filetype] then
-            client.server_capabilities.semanticTokensProvider = nil
-          end
+		  client.server_capabilities.semanticTokensProvider = nil
 
           -- Override server capabilities
           if settings.server_capabilities then
@@ -247,7 +241,6 @@ return {
         end,
       })
 
-	require("raivo.autoformat").setup()
       require("lsp_lines").setup()
       vim.diagnostic.config { virtual_text = true, virtual_lines = false }
 

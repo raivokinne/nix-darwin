@@ -17,6 +17,7 @@
   ];
 
   extraConfig = ''
+    set -gu default-command
     set -g prefix C-a
     set -g mouse on
 
