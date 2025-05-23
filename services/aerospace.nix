@@ -11,12 +11,13 @@ pkgs,
 
 		# Source aerospace config from the home-manager store
 		home.file.".aerospace.toml".text = ''
-		after-startup-command = ['exec-and-forget sketchybar']
+after-startup-command = ['exec-and-forget sketchybar']
 
 # Notify Sketchybar about workspace change
-exec-on-workspace-change = ['/bin/bash', '-c',
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
   'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
-  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
 ]
 
 # Start AeroSpace at login
@@ -73,12 +74,12 @@ preset = 'qwerty'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 20
-inner.vertical =   20
-outer.left =       20
-outer.bottom =     20
-outer.top =        10
-outer.right =      80
+inner.horizontal = 40
+inner.vertical =   40
+outer.left =       40
+outer.bottom =     40
+outer.top =        40
+outer.right =      40
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -175,7 +176,7 @@ f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling
 backspace = ['close-all-windows-but-current', 'mode main']
 
 [mode.apps.binding]
-alt-enter = ['exec-and-forget open -a /Applications/Ghostty.app', 'mode main']
+alt-w = ['exec-and-forget open -a /Applications/Ghostty.app', 'mode main']
 
 # [workspace-to-monitor-force-assignment]
 #     1 = '^dell$'

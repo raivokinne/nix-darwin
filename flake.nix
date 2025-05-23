@@ -11,9 +11,12 @@
 		nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
 		flake-utils.url    = "github:numtide/flake-utils";
+		spacebar = {
+			url = "github:shaunsingh/spacebar";
+		};
 	};
 
-	outputs = { self, nix-darwin, nixpkgs, nixpkgs-unstable, nix-homebrew, templ, home-manager, ... }@inputs:
+	outputs = { self, nix-darwin, nixpkgs, nixpkgs-unstable, nix-homebrew, templ, home-manager,spacebar, ... }@inputs:
 		let
 			configuration = { pkgs, config, ... }: {
 				# List packages installed in system profile. To search by name, run:
@@ -21,6 +24,7 @@
 				nixpkgs.config.allowUnfree = true;
 				nixpkgs.overlays = [
 					inputs.templ.overlays.default
+					spacebar.overlay
 				];
 				environment.systemPackages = with pkgs; [
 					neovim
@@ -35,7 +39,7 @@
 
 				services = {
 					sketchybar = {
-						enable = false;
+						enable = true;
 					};
 				};
 

@@ -229,6 +229,22 @@
     },
     "nixpkgs_4": {
       "locked": {
+        "lastModified": 1747942493,
+        "narHash": "sha256-IUq6h/GWYnSjHpRUwFR7NftIWB7tCl8Nj0MfMiJAznU=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "20752397049c5a619960ec90feb4e35fa9887fc1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "master",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1741862977,
         "narHash": "sha256-prZ0M8vE/ghRGGZcflvxCu40ObKaB+ikn74/xQoNrGQ=",
         "owner": "NixOS",
@@ -251,7 +267,26 @@
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "spacebar": "spacebar",
         "templ": "templ"
+      }
+    },
+    "spacebar": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1639952514,
+        "narHash": "sha256-/uJiVl9oQwrquXG1EePV/FmNhs4o3mOAGhrcSPEbdKE=",
+        "owner": "shaunsingh",
+        "repo": "spacebar",
+        "rev": "fae55fce78f6130bf4d766eae09ae838447c60b4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "shaunsingh",
+        "repo": "spacebar",
+        "type": "github"
       }
     },
     "systems": {
@@ -272,7 +307,7 @@
     "templ": {
       "inputs": {
         "gitignore": "gitignore",
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_5",
         "nixpkgs-unstable": "nixpkgs-unstable_2",
         "version": "version",
         "xc": "xc"
