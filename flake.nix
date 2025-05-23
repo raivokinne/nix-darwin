@@ -41,6 +41,9 @@
 					sketchybar = {
 						enable = true;
 					};
+					jankyborders = {
+						enable             = true;                     # turn the service on
+					};
 				};
 
 				homebrew = {
