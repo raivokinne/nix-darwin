@@ -42,13 +42,13 @@
 						enable = true;
 					};
 					jankyborders = {
-						enable             = true;                     # turn the service on
+						enable = false;                     # turn the service on
 					};
 				};
 
 				homebrew = {
 					enable = true;
-					casks = [ "podman-desktop" "docker" "amethyst" ];
+					casks = [ "podman-desktop" "docker" "amethyst" "ghostty" ];
 					brews = [ "podman" "mariadb" "podman-compose" ];
 					onActivation = {
 						autoUpdate = true;

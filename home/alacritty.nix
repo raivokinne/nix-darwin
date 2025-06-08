@@ -7,7 +7,7 @@
 		colors = {
 			primary = {
 				background = "#000000";
-				foreground = "#cccccc";
+				foreground = "#ffffff";
 			};
 		};
 		window = {
@@ -21,11 +21,11 @@
 		};
 
 		font = let jetbrainsMono = style: {
-			family = "JetBrainsMono Nerd Font";
+			family = "IosevkaTerm Nerd Font Mono";
 			inherit style;
 		}; in {
 			size = 16;
-			normal = jetbrainsMono "Light";
+			normal = jetbrainsMono "Regular";
 		};
 
 		cursor = {

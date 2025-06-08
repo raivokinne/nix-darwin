@@ -11,6 +11,14 @@ return {
       { "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
       "saadparwaiz1/cmp_luasnip",
       "roobert/tailwindcss-colorizer-cmp.nvim",
+      {
+        "supermaven-inc/supermaven-nvim",
+        config = function()
+          require("supermaven-nvim").setup {
+            -- disable_inline_completion = true,
+          }
+        end,
+      },
     },
     config = function()
       require "raivo.completion"
