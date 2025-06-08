@@ -21,7 +21,7 @@
 		};
 
 		font = let jetbrainsMono = style: {
-			family = "IosevkaTerm Nerd Font Mono";
+			family = "JetBrainsMono Nerd Font";
 			inherit style;
 		}; in {
 			size = 16;

@@ -26,12 +26,10 @@
     zstyle ':fzf-tab:complete:ls:*' fzf-preview 'cat $realpath'
     # switch group using `<` and `>`
     zstyle ':fzf-tab:*' switch-group '<' '>'
-	if [[ -o interactive ]]; then
-		fastfetch
-	fi
 	export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 	export PATH="$PATH:$HOME/.cargo/bin"
 	export PATH="$PATH:$HOME/.local/bin"
+	export PATH="$PATH:$HOME/.config/emacs/bin"
 	export EDITOR=nvim
 	export VISUAL=nvim
 	alias l='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first'
