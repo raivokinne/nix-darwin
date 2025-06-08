@@ -25,7 +25,7 @@
 			inherit style;
 		}; in {
 			size = 16;
-			normal = jetbrainsMono "Regular";
+			normal = jetbrainsMono "Light";
 		};
 
 		cursor = {

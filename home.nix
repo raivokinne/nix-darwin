@@ -14,6 +14,7 @@ in
 	home.homeDirectory = "/Users/raivokinne";
 
 	home.packages = with pkgs; [
+		emacs
 		lazygit
 		gh
 		docker
