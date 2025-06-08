@@ -14,7 +14,10 @@ in
 	home.homeDirectory = "/Users/raivokinne";
 
 	home.packages = with pkgs; [
+		librewolf
+		fish
 		kitty
+		emacs
 		tree-sitter
 		lazygit
 		gh

@@ -11,6 +11,8 @@
   initContent = ''
     bindkey -e
 
+	ZSH_THEME=robbyrussell
+
     # disable sort when completing `git checkout`
     zstyle ':completion:*:git-checkout:*' sort false
     # set descriptions format to enable group support
@@ -36,6 +38,7 @@
 	alias ll='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -l --git -h'
 	alias la='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a'
 	alias lla='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a -l --git -h'
+  alias em="emacs -nw"
   '';
   oh-my-zsh = {
     enable = false;

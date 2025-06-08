@@ -48,8 +48,8 @@
 
 				homebrew = {
 					enable = true;
-					casks = [ "podman-desktop" "docker" "amethyst" "ghostty" ];
-					brews = [ "podman" "mariadb" "podman-compose" ];
+					casks = [ "podman-desktop" "docker" "font-iosevka" "ghostty" ];
+					brews = [ "podman" "mariadb" "podman-compose" "composer" ];
 					onActivation = {
 						autoUpdate = true;
 						cleanup = "uninstall";
