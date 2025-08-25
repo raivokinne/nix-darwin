@@ -1,6 +1,7 @@
 {
 lib,
 pkgs,
+config,
 ...
 }: {
 	config = lib.mkIf (pkgs.stdenv.isDarwin) {
@@ -11,6 +12,7 @@ pkgs,
 
 		# Source aerospace config from the home-manager store
 		home.file.".aerospace.toml".text = ''
+
 # Start AeroSpace at login
 start-at-login = false
 
@@ -65,12 +67,12 @@ preset = 'qwerty'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 5
-inner.vertical =   5
-outer.left =       20
-outer.bottom =     20
-outer.top =        20
-outer.right =      20
+inner.horizontal = 10
+inner.vertical =   10
+outer.left =       10
+outer.bottom =     10
+outer.top =        10
+outer.right =      10
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

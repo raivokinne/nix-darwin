@@ -2,6 +2,8 @@ local opt = vim.opt
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.opt.guicursor = ""
+
 opt.cursorline = true
 
 opt.inccommand = "split"
@@ -20,11 +22,11 @@ opt.shada = { "'10", "<0", "s10", "h" }
 
 opt.formatoptions:remove "o"
 
-opt.wrap = true
+opt.wrap = false
 opt.linebreak = true
 
-opt.tabstop = 3
-opt.shiftwidth = 3
+opt.tabstop = 4
+opt.shiftwidth = 4
 
 opt.more = false
 

@@ -37,10 +37,19 @@
 
 				system.primaryUser = "raivokinne";
 
+				services = {
+					jankyborders = {
+						enable = true;
+					};
+				};
+
 				homebrew = {
 					enable = true;
 					casks = [ "podman-desktop" "dotnet-sdk" "docker" "font-jetbrains-mono-nerd-font" "ghostty" ];
 					brews = [ "podman" "mariadb" "podman-compose" "composer" ];
+					taps = [
+						"FelixKratz/formulae"
+					];
 					onActivation = {
 						autoUpdate = true;
 						cleanup = "uninstall";

@@ -3,6 +3,7 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 set("n", "x", '"_x')
+set("n", "<leader>pv", vim.cmd.Ex)
 
 set("n", "tt", ":tabnew<CR>")
 set("n", "<S-l>", ":tabnext<CR>")
