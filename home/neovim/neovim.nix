@@ -14,5 +14,5 @@ in
 		];
 	};
 
-	xdg.configFile.nvim.source = mkOutOfStoreSymlink /Users/raivokinne/nix/home/neovim/config;
+	xdg.configFile.nvim.source = mkOutOfStoreSymlink /Users/raivokinne/.config/nix/home/neovim/config;
 }

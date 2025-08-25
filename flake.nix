@@ -48,7 +48,7 @@
 
 				homebrew = {
 					enable = true;
-					casks = [ "podman-desktop" "docker" "font-iosevka" "ghostty" ];
+					casks = [ "podman-desktop" "dotnet-sdk" "docker" "font-jetbrains-mono-nerd-font" "ghostty" ];
 					brews = [ "podman" "mariadb" "podman-compose" "composer" ];
 					onActivation = {
 						autoUpdate = true;

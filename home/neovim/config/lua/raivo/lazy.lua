@@ -1,23 +1,10 @@
-if vim.env.VSCODE then
-  vim.g.vscode = true
-end
-
 if vim.loader then
   vim.loader.enable()
 end
 
-_G.dd = function(...)
-  require("snacks.debug").inspect(...)
-end
-_G.bt = function(...)
-  require("snacks.debug").backtrace()
-end
-_G.p = function(...)
-  require("snacks.debug").profile(...)
-end
-vim.print = _G.dd
-
-_G.Snacks = Snacks
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
 
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -32,6 +19,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-  { import = "raivo.plugins" },
-}, {})
+require("lazy").setup({ import = "raivo/plugins" }, {
+  change_detection = {
+    notify = false,
+  },
+})

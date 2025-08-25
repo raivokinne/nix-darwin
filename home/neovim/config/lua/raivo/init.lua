@@ -1,9 +1,7 @@
 require "raivo.keymapings"
 require "raivo.options"
 require "raivo.lazy"
-require "raivo.filetype"
-
-vim.g.mapleader = " "
+require "raivo.terminal"
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
