@@ -45,7 +45,6 @@ in
 		fd
 		jq
 		lazydocker
-		sketchybar
 		nh
 		openconnect
 		pipenv

@@ -37,15 +37,6 @@
 
 				system.primaryUser = "raivokinne";
 
-				services = {
-					sketchybar = {
-						enable = true;
-					};
-					jankyborders = {
-						enable = false;                     # turn the service on
-					};
-				};
-
 				homebrew = {
 					enable = true;
 					casks = [ "podman-desktop" "dotnet-sdk" "docker" "font-jetbrains-mono-nerd-font" "ghostty" ];

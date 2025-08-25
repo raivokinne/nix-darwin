@@ -21,7 +21,7 @@
 		};
 
 		font = let jetbrainsMono = style: {
-			family = "FiraCode Nerd Font";
+			family = "JetBrainsMono Nerd Font";
 			inherit style;
 		}; in {
 			size = 16;
