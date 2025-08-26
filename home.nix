@@ -18,6 +18,7 @@ in
 		fish
 		kitty
 		emacs
+		readline
 		tree-sitter
 		lazygit
 		gh
@@ -32,6 +33,7 @@ in
 		tailwindcss-language-server
 		pass
 		lua-language-server
+		sketchybar
 		stylua
 		zoxide
 		iperf
@@ -40,6 +42,7 @@ in
 		fastfetch
 		eza
 		alacritty
+		wezterm
 		starship
 		git
 		fd

@@ -1,43 +1,25 @@
-local opt = vim.opt
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 vim.opt.guicursor = ""
-
-opt.cursorline = true
-
-opt.inccommand = "split"
-
-opt.smartcase = true
-opt.ignorecase = true
-
-opt.number = true
-opt.relativenumber = true
-
-opt.splitbelow = true
-opt.splitright = true
-
-opt.signcolumn = "yes"
-opt.shada = { "'10", "<0", "s10", "h" }
-
-opt.formatoptions:remove "o"
-
-opt.wrap = false
-opt.linebreak = true
-
-opt.tabstop = 4
-opt.shiftwidth = 4
-
-opt.more = false
-
-opt.foldmethod = "manual"
-
-opt.title = true
-opt.titlestring = '%t%( %M%)%( (%{expand("%:~:h")})%)%a (nvim)'
-
-opt.undofile = true
-
-opt.swapfile = false
-opt.backup = false
-opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
-opt.undofile = true
+vim.opt.cursorline = true
+vim.opt.inccommand = "split"
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.signcolumn = "yes"
+vim.opt.shada = { "'10", "<0", "s10", "h" }
+vim.opt.formatoptions:remove "o"
+vim.opt.wrap = false
+vim.opt.linebreak = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.more = true
+vim.opt.foldmethod = "manual"
+vim.opt.title = true
+vim.opt.titlestring = '%t%( %M%)%( (%{expand("%:~:h")})%)%a (nvim)'
+vim.opt.undofile = true
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
+vim.opt.undofile = true

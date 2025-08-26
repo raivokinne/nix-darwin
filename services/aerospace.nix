@@ -12,7 +12,13 @@ config,
 
 		# Source aerospace config from the home-manager store
 		home.file.".aerospace.toml".text = ''
+			after-startup-command = ['exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 >/dev/null 2>&1 & disown']
 
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',
+]
 # Start AeroSpace at login
 start-at-login = false
 
@@ -67,12 +73,17 @@ preset = 'qwerty'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 10
-inner.vertical =   10
-outer.left =       10
-outer.bottom =     10
-outer.top =        10
-outer.right =      10
+inner.horizontal = 8
+inner.vertical = 8
+outer.bottom = 5
+# outer.top = [{ monitor.main = 40}, 40]
+outer.top = [
+  { monitor."built-in" = 10 },   # Matches MacBook screen (with the notch)
+  { monitor."main" = 45 },       # Applies to whichever display is currently "main"
+  45                             # Fallback default for all others
+]
+outer.right = 5
+outer.left = 5
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

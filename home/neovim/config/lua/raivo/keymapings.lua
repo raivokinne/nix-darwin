@@ -1,9 +1,10 @@
 local set = vim.keymap.set
 local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 set("n", "x", '"_x')
-set("n", "<leader>pv", vim.cmd.Ex)
+set("n", "-", vim.cmd.Ex)
 
 set("n", "tt", ":tabnew<CR>")
 set("n", "<S-l>", ":tabnext<CR>")

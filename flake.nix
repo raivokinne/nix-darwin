@@ -39,13 +39,13 @@
 
 				services = {
 					jankyborders = {
-						enable = true;
+						enable = false;
 					};
 				};
 
 				homebrew = {
 					enable = true;
-					casks = [ "podman-desktop" "dotnet-sdk" "docker" "font-jetbrains-mono-nerd-font" "ghostty" ];
+					casks = [ "podman-desktop" "dotnet-sdk" "font-fira-code-nerd-font" "font-sf-pro" "docker" "font-jetbrains-mono-nerd-font" "ghostty" ];
 					brews = [ "podman" "mariadb" "podman-compose" "composer" ];
 					taps = [
 						"FelixKratz/formulae"
