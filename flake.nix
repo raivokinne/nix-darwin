@@ -9,6 +9,7 @@
 		templ.url = "github:a-h/templ";
 		home-manager.url = "github:nix-community/home-manager/release-25.05";
 		nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+		alacritty-theme.url = "github:alexghr/alacritty-theme.nix";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
 		flake-utils.url    = "github:numtide/flake-utils";
 		spacebar = {
@@ -16,7 +17,7 @@
 		};
 	};
 
-	outputs = { self, nix-darwin, nixpkgs, nixpkgs-unstable, nix-homebrew, templ, home-manager,spacebar, ... }@inputs:
+	outputs = { self, nix-darwin, nixpkgs, nixpkgs-unstable, nix-homebrew, templ, home-manager,spacebar,alacritty-theme, ... }@inputs:
 		let
 			configuration = { pkgs, config, ... }: {
 				# List packages installed in system profile. To search by name, run:
@@ -24,6 +25,7 @@
 				nixpkgs.config.allowUnfree = true;
 				nixpkgs.overlays = [
 					inputs.templ.overlays.default
+					alacritty-theme.overlays.default
 					spacebar.overlay
 				];
 				environment.systemPackages = with pkgs; [

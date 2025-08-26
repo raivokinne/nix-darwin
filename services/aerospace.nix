@@ -12,13 +12,16 @@ config,
 
 		# Source aerospace config from the home-manager store
 		home.file.".aerospace.toml".text = ''
-			after-startup-command = ['exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 >/dev/null 2>&1 & disown']
+on-focus-changed = [
+  "exec-and-forget osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'",
+]
 
 exec-on-workspace-change = [
-  '/bin/bash',
+  '/bin/zsh',
   '-c',
-  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',
+  '/usr/bin/osascript -e "tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\""',
 ]
+
 # Start AeroSpace at login
 start-at-login = false
 

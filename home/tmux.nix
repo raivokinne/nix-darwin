@@ -1,14 +1,6 @@
 { pkgs, ... }:
 {
   enable = true;
-  aggressiveResize = true;
-  baseIndex = 1;
-  disableConfirmationPrompt = true;
-  keyMode = "vi";
-  shell = "${pkgs.zsh}/bin/zsh";
-  shortcut = "a";
-  sensibleOnTop = false;
-
   extraConfig = ''
 		set-option -sa terminal-overrides ",xterm*:Tc"
 set -g prefix C-a
