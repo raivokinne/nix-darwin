@@ -5,13 +5,12 @@
 
   settings = {
     window = {
-      padding = { x = 4; y = 8; };
-      decorations = "full";
+      padding = { x = 0; y = 0; };
       opacity = 1;
       startup_mode = "Windowed";
       title = "Alacritty";
       dynamic_title = true;
-      decorations_theme_variant = "None";
+	  decorations = "Full";
     };
 
     general = {

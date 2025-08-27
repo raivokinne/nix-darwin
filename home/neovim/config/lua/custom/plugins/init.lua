@@ -125,4 +125,11 @@ return {
       vim.keymap.set('n', 'gh', '<cmd>diffget //3<CR>')
     end,
   },
+  {
+    'mbbill/undotree',
+
+    config = function()
+      vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+    end,
+  },
 }

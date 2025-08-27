@@ -95,11 +95,6 @@
 						LaunchServices = {
 							LSQuarantine = false;
 						};
-						trackpad = {
-							TrackpadRightClick = true;
-							TrackpadThreeFingerDrag = true;
-							Clicking = true;
-						};
 						finder = {
 							AppleShowAllFiles = true;
 							CreateDesktop = false;
